@@ -14,7 +14,7 @@
 
 ### wb (Agent Workbench)
 
-여러 Claude Code 에이전트를 레인으로 나눠 병렬로 돌리는 작업대다. 작업마다 모델을 고르고, 동시에 도는 레인과 슬롯 수를 제한하고, 위험한 git 조작을 막는다. 세션 사이의 핸드오프와 검토도 맡는다. 안전 훅은 설치하면 바로 켜진다. 작업 훅은 `.wb/config.json` 이 있는 저장소에서만 동작한다.
+여러 Claude Code 에이전트를 레인으로 나눠 병렬로 돌리는 작업대다. 작업마다 모델을 고른다. 동시에 실행하는 레인과 슬롯 수를 제한하고, 위험한 git 조작을 막는다. 세션 사이의 핸드오프와 검토도 맡는다. 안전 훅은 설치하면 바로 켜진다. 작업 훅은 `.wb/config.json` 이 있는 저장소에서만 동작한다.
 
 저장소: <https://github.com/wook8170/wb-plugin>
 
@@ -30,7 +30,7 @@
 - wb 는 에이전트를 돌리는 방식을 맡는다. 레인 · 안전 장치 · 품질 점검이 여기에 속한다.
 - VPR 은 출하 판정을 맡는다.
 
-하네스와 wb 는 출하 판정이 필요할 때 VPR 을 부른다. 그런데 VPR 은 두 플러그인 어디에도 들어 있지 않으므로 따로 설치해야 한다.
+하네스와 wb 는 출하 판정이 필요할 때 VPR 을 호출한다. 그런데 VPR 은 두 플러그인 어디에도 들어 있지 않으므로 따로 설치해야 한다.
 
 ## 설치
 
@@ -50,7 +50,7 @@ claude plugin install verifying-production-readiness@wook8170-plugins
 
 세션 안에서는 `/plugin marketplace add wook8170/claude-plugins` 와 `/plugin install <이름>@wook8170-plugins` 로 같은 일을 한다.
 
-목록 파일은 판을 고정하지 않는다. 각 항목은 해당 저장소의 기본 브랜치를 가리킨다. 설치되는 판은 그 저장소의 `plugin.json` 에 적힌 값이라서, 작성자가 그 값을 올리면 새 판을 받을 수 있다. 새 판은 `claude plugin update <이름>@wook8170-plugins` 로 받는다.
+목록 파일은 판을 고정하지 않고, 각 항목은 해당 저장소의 기본 브랜치를 가리킨다. 설치되는 판은 그 저장소의 `plugin.json` 에 적힌 값을 따른다. 그래서 작성자가 그 값을 올리면 새 판을 받을 수 있다. 새 판은 `claude plugin update <이름>@wook8170-plugins` 로 받는다.
 
 ## 요구 사항
 
@@ -68,4 +68,4 @@ claude plugin install verifying-production-readiness@wook8170-plugins
 
 ## 라이선스
 
-이 저장소의 목록 파일은 MIT 라이선스를 따른다. [LICENSE](LICENSE) 를 본다. 플러그인마다 자기 저장소에 라이선스가 따로 있고, 세 플러그인 모두 MIT 다.
+이 저장소의 목록 파일은 MIT 라이선스를 따른다. 자세한 내용은 [LICENSE](LICENSE) 를 참고한다. 플러그인마다 자기 저장소에 라이선스가 따로 있고, 세 플러그인 모두 MIT 다.
