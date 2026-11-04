@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "wook8170-plugins",
+  "description": "Claude Code plugins by Wook Jang: a process harness, an agent workbench, and a production-readiness audit.",
+  "owner": {
+    "name": "Wook Jang",
+    "url": "https://github.com/wook8170"
+  },
+  "plugins": [
+    {
+      "name": "king-wjang-harness",
+      "source": { "source": "github", "repo": "wook8170/king-wjang-harness" },
+      "description": "Hook and CLI harness that enforces design → build → ship process discipline. Completely silent in projects without a .harness/ directory.",
+      "author": { "name": "장욱" },
+      "license": "MIT",
+      "homepage": "https://github.com/wook8170/king-wjang-harness",
+      "repository": "https://github.com/wook8170/king-wjang-harness",
+      "keywords": ["workflow", "hooks", "process-discipline", "design-track", "harness"],
+      "category": "workflow"
+    },
+    {
+      "name": "wb",
+      "source": { "source": "github", "repo": "wook8170/wb-plugin" },
+      "displayName": "Agent Workbench",
+      "description": "Workbench for running parallel Claude Code agent lanes: model routing, lane and slot limits, git safety guards, handoff and review.",
+      "author": { "name": "윤결파파", "email": "wook81701@gmail.com" },
+      "license": "MIT",
+      "homepage": "https://github.com/wook8170/wb-plugin",
+      "repository": "https://github.com/wook8170/wb-plugin",
+      "keywords": ["orchestration", "subagents", "worktree", "safety", "handoff"],
+      "category": "workflow"
+    },
+    {
+      "name": "verifying-production-readiness",
+      "source": { "source": "github", "repo": "wook8170/verifying-production-readiness" },
+      "description": "Use when judging whether a system can ship to production — pre-launch sign-off, go/no-go calls, release readiness audits, \"can we ship this?\", \"확인만 하고 올리자\", or when resuming and iterating on a prior readiness report.",
+      "author": { "name": "장욱 (Wook Jang)" },
+      "license": "MIT",
+      "homepage": "https://github.com/wook8170/verifying-production-readiness",
+      "repository": "https://github.com/wook8170/verifying-production-readiness",
+      "keywords": ["readiness", "release", "go-no-go", "audit", "quality-gate"],
+      "category": "workflow"
+    }
+  ]
+}
