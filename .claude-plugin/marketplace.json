@@ -38,7 +38,7 @@
       "displayName": "Lanekeeper — Agent Workbench",
       "description": "Workbench for running parallel Claude Code agent lanes: model routing, lane and slot limits, git safety guards, handoff and review. Claude Code only (ships bin/ tools).",
       "author": {
-        "name": "윤결파파",
+        "name": "Wook Jang",
         "email": "wook81701@gmail.com"
       },
       "license": "MIT",
