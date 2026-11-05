@@ -12,11 +12,13 @@
 
 저장소: <https://github.com/wook8170/king-wjang-harness>
 
-### wb (Agent Workbench)
+### lanekeeper (Lanekeeper — Agent Workbench)
 
-여러 Claude Code 에이전트를 레인으로 나눠 병렬로 돌리는 작업대다. 작업마다 모델을 고른다. 동시에 실행하는 레인과 슬롯 수를 제한하고, 위험한 git 조작을 막는다. 세션 사이의 핸드오프와 검토도 맡는다. 안전 훅은 설치하면 바로 켜진다. 작업 훅은 `.wb/config.json` 이 있는 저장소에서만 동작한다.
+여러 Claude Code 에이전트를 레인으로 나눠 병렬로 돌리는 작업대다. 작업마다 모델을 고른다. 동시에 실행하는 레인과 슬롯 수를 제한하고, 위험한 git 조작을 막는다. 세션 사이의 핸드오프와 검토도 맡는다. 안전 훅은 설치하면 바로 켜진다. 작업 훅은 `.lanekeeper/config.json` 이 있는 저장소에서만 동작한다.
 
-저장소: <https://github.com/wook8170/wb-plugin>
+저장소: <https://github.com/wook8170/lanekeeper>
+
+Lanekeeper 의 0.1.5 까지 이름은 `wb` 였다. `wb@wook8170-plugins` 를 설치했다면 먼저 `claude plugin uninstall wb@wook8170-plugins` 로 지운다. 그다음 `lanekeeper@wook8170-plugins` 를 설치한다. `~/.wb` 와 `.wb/` 의 설정은 그대로 읽힌다. 옮기고 싶으면 폴더 이름을 `~/.lanekeeper` 와 `.lanekeeper/` 로 바꾼다.
 
 ### verifying-production-readiness (VPR)
 
@@ -27,10 +29,10 @@
 ## 세 플러그인의 관계
 
 - 하네스는 단계 규율을 맡는다. 단계마다 무엇을 해도 되는지, 언제 단계를 닫을 수 있는지를 정한다.
-- wb 는 에이전트를 돌리는 방식을 맡는다. 레인 · 안전 장치 · 품질 점검이 여기에 속한다.
+- Lanekeeper 는 에이전트를 돌리는 방식을 맡는다. 레인 · 안전 장치 · 품질 점검이 여기에 속한다.
 - VPR 은 출하 판정을 맡는다.
 
-하네스와 wb 는 출하 판정이 필요할 때 VPR 을 호출한다. 그런데 VPR 은 두 플러그인 어디에도 들어 있지 않으므로 따로 설치해야 한다.
+하네스와 Lanekeeper 는 출하 판정이 필요할 때 VPR 을 호출한다. 그런데 VPR 은 두 플러그인 어디에도 들어 있지 않으므로 따로 설치해야 한다.
 
 ## 설치
 
@@ -44,7 +46,7 @@ claude plugin marketplace add wook8170/claude-plugins
 
 ```bash
 claude plugin install king-wjang-harness@wook8170-plugins
-claude plugin install wb@wook8170-plugins
+claude plugin install lanekeeper@wook8170-plugins
 claude plugin install verifying-production-readiness@wook8170-plugins
 ```
 
@@ -54,8 +56,8 @@ claude plugin install verifying-production-readiness@wook8170-plugins
 
 ## 요구 사항
 
-- Node.js 18 이상(하네스와 wb 가 Node 스크립트를 실행한다).
-- Claude Code 2.1.295 이상. wb 의 안전 훅이 이 판을 요구한다. 나머지 두 플러그인은 최소 판을 따로 정하지 않았다.
+- Node.js 18 이상(하네스와 Lanekeeper 가 Node 스크립트를 실행한다).
+- Claude Code 2.1.295 이상. Lanekeeper 의 안전 훅이 이 판을 요구한다. 나머지 두 플러그인은 최소 판을 따로 정하지 않았다.
 - VPR 은 `bash` 와 `python3`(표준 라이브러리만)도 쓴다.
 
 ## 사용자 매뉴얼
@@ -63,7 +65,7 @@ claude plugin install verifying-production-readiness@wook8170-plugins
 | 플러그인 | 읽을 곳 |
 |---|---|
 | king-wjang-harness | [README](https://github.com/wook8170/king-wjang-harness/blob/main/README.ko.md) 의 「빠른 시작」 · 「명령 레퍼런스」 절 |
-| wb | [docs/ko](https://github.com/wook8170/wb-plugin/tree/main/docs/ko)(한국어), [docs/en](https://github.com/wook8170/wb-plugin/tree/main/docs/en)(영어) |
+| lanekeeper | [docs/ko](https://github.com/wook8170/lanekeeper/tree/main/docs/ko)(한국어), [docs/en](https://github.com/wook8170/lanekeeper/tree/main/docs/en)(영어) |
 | verifying-production-readiness | [README](https://github.com/wook8170/verifying-production-readiness#readme) 와 [스킬 README](https://github.com/wook8170/verifying-production-readiness/tree/main/skills/verifying-production-readiness) |
 
 ## 라이선스
