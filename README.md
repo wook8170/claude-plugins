@@ -12,11 +12,13 @@ A hook and CLI harness for process discipline. It splits work into a design trac
 
 Repository: <https://github.com/wook8170/king-wjang-harness>
 
-### wb (Agent Workbench)
+### lanekeeper (Lanekeeper — Agent Workbench)
 
-A workbench for running parallel Claude Code agents in lanes. It routes each task to a model, limits how many lanes and slots run at once, and guards git operations. It also handles handoff and review between sessions. The safety hooks turn on at install. The workflow hooks act only in a repository that has `.wb/config.json`.
+A workbench for running parallel Claude Code agents in lanes. It routes each task to a model, limits how many lanes and slots run at once, and guards git operations. It also handles handoff and review between sessions. The safety hooks turn on at install. The workflow hooks act only in a repository that has `.lanekeeper/config.json`.
 
-Repository: <https://github.com/wook8170/wb-plugin>
+Repository: <https://github.com/wook8170/lanekeeper>
+
+Lanekeeper was called `wb` up to 0.1.5. If you installed `wb@wook8170-plugins`, run `claude plugin uninstall wb@wook8170-plugins`, then install `lanekeeper@wook8170-plugins`. Settings in `~/.wb` and `.wb/` keep working; to move them, rename the folders to `~/.lanekeeper` and `.lanekeeper/`.
 
 ### verifying-production-readiness (VPR)
 
@@ -27,10 +29,10 @@ Repository: <https://github.com/wook8170/verifying-production-readiness>
 ## How they fit together
 
 - The harness sets the phase discipline: what may happen in each phase, and when a phase may close.
-- wb sets how agents run: lanes, safety guards and quality checks.
+- Lanekeeper sets how agents run: lanes, safety guards and quality checks.
 - VPR gives the ship verdict.
 
-The harness and wb both call VPR when they need a release verdict. VPR is not bundled in either of them, so install it as well.
+The harness and Lanekeeper both call VPR when they need a release verdict. VPR is not bundled in either of them, so install it as well.
 
 ## Install
 
@@ -44,7 +46,7 @@ Then install the plugins you want. The marketplace name is `wook8170-plugins`, a
 
 ```bash
 claude plugin install king-wjang-harness@wook8170-plugins
-claude plugin install wb@wook8170-plugins
+claude plugin install lanekeeper@wook8170-plugins
 claude plugin install verifying-production-readiness@wook8170-plugins
 ```
 
@@ -54,8 +56,8 @@ The catalog does not pin versions. Each entry points at the default branch of it
 
 ## Requirements
 
-- Node.js 18 or later (the harness and wb run Node scripts).
-- Claude Code 2.1.295 or later. wb needs this version for its safety hooks. The other two plugins state no minimum.
+- Node.js 18 or later (the harness and Lanekeeper run Node scripts).
+- Claude Code 2.1.295 or later. Lanekeeper needs this version for its safety hooks. The other two plugins state no minimum.
 - VPR also uses `bash` and `python3` (standard library only).
 
 ## Manuals
@@ -63,7 +65,7 @@ The catalog does not pin versions. Each entry points at the default branch of it
 | Plugin | Where to read |
 |---|---|
 | king-wjang-harness | [README](https://github.com/wook8170/king-wjang-harness#readme), "Quick start" and "Command reference" sections |
-| wb | [docs/en](https://github.com/wook8170/wb-plugin/tree/main/docs/en) (English), [docs/ko](https://github.com/wook8170/wb-plugin/tree/main/docs/ko) (Korean) |
+| lanekeeper | [docs/en](https://github.com/wook8170/lanekeeper/tree/main/docs/en) (English), [docs/ko](https://github.com/wook8170/lanekeeper/tree/main/docs/ko) (Korean) |
 | verifying-production-readiness | [README](https://github.com/wook8170/verifying-production-readiness#readme) and [skill README](https://github.com/wook8170/verifying-production-readiness/tree/main/skills/verifying-production-readiness) |
 
 ## License
