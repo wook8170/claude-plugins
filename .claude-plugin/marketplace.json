@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "wook8170-plugins",
-  "description": "Claude Code plugins by Wook Jang: a process harness, an agent workbench (Lanekeeper), and a production-readiness audit.",
+  "description": "Claude Code plugins by Wook Jang: a process harness, an agent workbench (Lanekeeper), a production-readiness audit, and a set of everyday skills.",
   "owner": {
     "name": "Wook Jang",
     "url": "https://github.com/wook8170"
@@ -74,6 +74,31 @@
         "quality-gate"
       ],
       "category": "workflow"
+    },
+    {
+      "name": "wook-skills",
+      "source": {
+        "source": "github",
+        "repo": "wook8170/wook-skills"
+      },
+      "displayName": "Wook Skills",
+      "description": "Ten everyday Claude Code skills: session handoff and pickup, work status, code structure limits, readable Korean writing, design deliverables, PDF typesetting, glossary checks, 2x retina capture, and a UI stability harness. Project-specific values come from .claude/skills-config/<skill>.md.",
+      "author": {
+        "name": "Wook Jang"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/wook8170/wook-skills",
+      "repository": "https://github.com/wook8170/wook-skills",
+      "keywords": [
+        "skills",
+        "handoff",
+        "code-structure",
+        "korean-writing",
+        "pdf",
+        "glossary",
+        "ui-testing"
+      ],
+      "category": "productivity"
     }
   ]
 }
