@@ -2,7 +2,7 @@
 
 English | [한국어](README.ko.md)
 
-A Claude Code plugin marketplace with three plugins. Each plugin lives in its own GitHub repository. This repository holds only the catalog file, `.claude-plugin/marketplace.json`.
+A Claude Code plugin marketplace with four plugins. Each plugin lives in its own GitHub repository. This repository holds only the catalog file, `.claude-plugin/marketplace.json`.
 
 ## Plugins
 
@@ -26,6 +26,12 @@ A skill for go/no-go release decisions. A verdict must rest on observed evidence
 
 Repository: <https://github.com/wook8170/verifying-production-readiness>
 
+### wook-skills
+
+Ten skills for day-to-day engineering work: session handoff and pickup, work status, code structure limits, readable Korean writing, design deliverables, PDF typesetting, glossary checks, 2x retina capture, and a UI stability harness. Project-specific values go in `.claude/skills-config/<skill>.md`.
+
+Repository: <https://github.com/wook8170/wook-skills>
+
 ## How they fit together
 
 - The harness sets the phase discipline: what may happen in each phase, and when a phase may close.
@@ -48,6 +54,7 @@ Then install the plugins you want. The marketplace name is `wook8170-plugins`, a
 claude plugin install king-wjang-harness@wook8170-plugins
 claude plugin install lanekeeper@wook8170-plugins
 claude plugin install verifying-production-readiness@wook8170-plugins
+claude plugin install wook-skills@wook8170-plugins
 ```
 
 Inside a session, `/plugin marketplace add wook8170/claude-plugins` and `/plugin install <name>@wook8170-plugins` do the same.
@@ -57,7 +64,7 @@ The catalog does not pin versions. Each entry points at the default branch of it
 ## Requirements
 
 - Node.js 18 or later (the harness and Lanekeeper run Node scripts).
-- Claude Code 2.1.295 or later. Lanekeeper needs this version for its safety hooks. The other two plugins state no minimum.
+- Claude Code 2.1.295 or later. Lanekeeper needs this version for its safety hooks. The other plugins state no minimum.
 - VPR also uses `bash` and `python3` (standard library only).
 
 ## Manuals
@@ -67,7 +74,8 @@ The catalog does not pin versions. Each entry points at the default branch of it
 | king-wjang-harness | [README](https://github.com/wook8170/king-wjang-harness#readme), "Quick start" and "Command reference" sections |
 | lanekeeper | [docs/en](https://github.com/wook8170/lanekeeper/tree/main/docs/en) (English), [docs/ko](https://github.com/wook8170/lanekeeper/tree/main/docs/ko) (Korean) |
 | verifying-production-readiness | [README](https://github.com/wook8170/verifying-production-readiness#readme) and [skill README](https://github.com/wook8170/verifying-production-readiness/tree/main/skills/verifying-production-readiness) |
+| wook-skills | [README](https://github.com/wook8170/wook-skills#readme) |
 
 ## License
 
-The catalog in this repository is under the MIT License. See [LICENSE](LICENSE). Each plugin has its own license in its repository. All three are MIT.
+The catalog in this repository is under the MIT License. See [LICENSE](LICENSE). Each plugin has its own license in its repository. All four are MIT.
