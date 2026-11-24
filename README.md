@@ -32,6 +32,12 @@ Ten skills for day-to-day engineering work: session handoff and pickup, work sta
 
 Repository: <https://github.com/wook8170/wook-skills>
 
+### lanekit
+
+Lays a development setup onto a new project in one step: guidance templates, a gate runner with ratchets and evidence files, and decision records. Run `/lanekit:init` in a new repository, then `/lanekit:doctor` to check it. Enforcement hooks stay in lanekeeper and skills stay in wook-skills. Runs on macOS, Linux and Windows.
+
+Repository: <https://github.com/wook8170/lanekit>
+
 ## How they fit together
 
 - The harness sets the phase discipline: what may happen in each phase, and when a phase may close.

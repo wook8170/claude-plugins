@@ -32,6 +32,12 @@ Lanekeeper 의 0.1.5 까지 이름은 `wb` 였다. `wb@wook8170-plugins` 를 설
 
 저장소: <https://github.com/wook8170/wook-skills>
 
+### lanekit
+
+새 프로젝트에 개발 체계를 한 번에 깐다. 지침 틀, 래칫과 증거 파일을 갖춘 게이트 실행기, 결정 기록을 놓는다. 새 저장소에서 `/lanekit:init` 을 실행하고 `/lanekit:doctor` 로 점검한다. 강제 훅은 lanekeeper, 스킬은 wook-skills 가 맡는다. macOS · Linux · Windows 에서 돈다.
+
+저장소: <https://github.com/wook8170/lanekit>
+
 ## 하네스 · Lanekeeper · VPR 의 관계
 
 - 하네스는 단계 규율을 맡는다. 단계마다 무엇을 해도 되는지, 언제 단계를 닫을 수 있는지를 정한다.

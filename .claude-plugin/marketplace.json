@@ -99,6 +99,27 @@
         "ui-testing"
       ],
       "category": "productivity"
+    },
+    {
+      "name": "lanekit",
+      "source": {
+        "source": "github",
+        "repo": "wook8170/lanekit"
+      },
+      "description": "Lays a development setup onto a new project in one step: guidance templates, a gate runner with ratchets and evidence files, and decision records. Works with lanekeeper (enforcement) and wook-skills (skills).",
+      "author": {
+        "name": "Wook Jang"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/wook8170/lanekit",
+      "repository": "https://github.com/wook8170/lanekit",
+      "keywords": [
+        "gate",
+        "ratchet",
+        "scaffold",
+        "evidence"
+      ],
+      "category": "workflow"
     }
   ]
 }
